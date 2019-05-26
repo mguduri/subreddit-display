@@ -1,0 +1,13 @@
+node_modules
+yarn-error.log
+.npm-cache
+node_modules/
+dist/
+build/
+buildsystem-test-results/
+src/styles/
+npm-debug.log
+cobertura-coverage.xml
+html-report
+.history
+yarn-error.log
