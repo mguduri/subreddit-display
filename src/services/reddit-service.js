@@ -24,6 +24,7 @@ export default class RedditService {
      * @returns {Promise<AxiosResponse<any>>} - Promise
      */
     getSubReddits(subreddit) {
+        console.log(subreddit);
         return this.client.get(`/r/${subreddit}.json`).then(response => response.data);
     }
 }

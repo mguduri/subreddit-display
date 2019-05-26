@@ -7,10 +7,10 @@ export const transformResponse = response => {
     return children;
 };
 
-export default function* getSubRedditPosts(subreddit = '') {
+export default function* getSubRedditPosts({ subreddit = ''}) {
     try {
         const redditService = yield call(serviceLocator);
-        const response = yield call([redditService, redditService.getSubReddits, subreddit]);
+        const response = yield call([redditService, redditService.getSubReddits], subreddit);
         yield put(fetchSubRedditPostsSuccess(transformResponse(response)));
     } catch (error) {
         yield put(fetchSubRedditPostsFailure(error));

@@ -1,5 +1,7 @@
 
 import { combineReducers } from 'redux';
+import subRedditPosts, * as fromsubRedditPosts from './sub-reddit-posts';
+
 
 /**
  * Appends appConfig to state
@@ -11,8 +13,11 @@ export function appConfig(state = {}) {
 }
 
 export default combineReducers({
-    appConfig
+    appConfig,
+    subRedditPosts
 });
 
 // ****** root selectors ******
 export const getAppConfig = state => state.appConfig;
+export const getSubRedditPosts = state => fromsubRedditPosts.getSubRedditPosts(state.subRedditPosts);
+export const isLoadingPosts = state => fromsubRedditPosts.isLoadingPosts(state.isLoadingPosts);

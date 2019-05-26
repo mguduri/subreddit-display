@@ -8,7 +8,7 @@ import {
  * Action creator to get list of subreddit posts
  * @return {{type: string}} - Returns object for dispatch
  */
-export const fetchSubRedditPostsRequest = () => ({ type: SUBREDDIT_POSTS_FETCH_REQUEST });
+export const fetchSubRedditPostsRequest = (subreddit) => ({ type: SUBREDDIT_POSTS_FETCH_REQUEST, subreddit  });
 
 /**
  * Action creator to get list of subreddit posts success
