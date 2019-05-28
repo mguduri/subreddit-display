@@ -1,7 +1,5 @@
-
-import { combineReducers } from 'redux';
-import subRedditPosts, * as fromsubRedditPosts from './sub-reddit-posts';
-
+import { combineReducers } from "redux";
+import subRedditPosts, * as fromsubRedditPosts from "./sub-reddit-posts";
 
 /**
  * Appends appConfig to state
@@ -9,15 +7,17 @@ import subRedditPosts, * as fromsubRedditPosts from './sub-reddit-posts';
  * @return {object} state - returns appConfig initial state for combine reducers
  */
 export function appConfig(state = {}) {
-    return state;
+  return state;
 }
 
 export default combineReducers({
-    appConfig,
-    subRedditPosts
+  appConfig,
+  subRedditPosts
 });
 
 // ****** root selectors ******
 export const getAppConfig = state => state.appConfig;
-export const getSubRedditPosts = state => fromsubRedditPosts.getSubRedditPosts(state.subRedditPosts);
-export const isLoadingPosts = state => fromsubRedditPosts.isLoadingPosts(state.isLoadingPosts);
+export const getSubRedditPosts = state =>
+  fromsubRedditPosts.getSubRedditPosts(state.subRedditPosts);
+export const isLoadingPosts = state =>
+  fromsubRedditPosts.isLoadingPosts(state.isLoadingPosts);
