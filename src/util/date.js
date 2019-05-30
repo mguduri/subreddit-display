@@ -1,5 +1,5 @@
+import moment from 'moment';
 export function getTotalDays(date) {
-    var d = new Date(date).getDate();
-    var n = new Date().getDate();
-    return n-d;
+    var now = moment.unix(date).format("YYYYMMDD");
+    return moment(now, "YYYYMMDD").fromNow();
 }

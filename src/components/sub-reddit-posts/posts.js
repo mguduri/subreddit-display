@@ -23,22 +23,15 @@ export default class Posts extends Component {
     this.setState({ show: false });
   }
 
-  openPost = id => {
-    const currentPost = this.props.posts.filter(post => post.data.id === id);
-    this.title = currentPost[0].data.title || "";
-    this.body = currentPost[0].data.selftext || "";
+  openPost = (title, body) => {
+    this.title = title;
+    this.body = body;
     this.setState({ show: true });
   };
 
   displayPosts = ({ data }) => {
     return (
-      <li
-        className="list-group-item bg-light"
-        onClick={() => this.openPost(data.id)}
-        key={data.id}
-      >
-        <Post {...data} />
-      </li>
+        <Post key={data.id} openPost = {this.openPost} data={data}/>
     );
   };
 

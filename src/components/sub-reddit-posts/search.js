@@ -55,7 +55,7 @@ export default class Search extends Component {
                 <input
                   id="subreddit"
                   type="text"
-                  className="form-control"
+                  className="form-control input-control-no-border input-control-add-border"
                   name="subreddit"
                   placeholder="Enter subreddit here"
                   onKeyPress={this.fetchposts}

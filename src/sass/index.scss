@@ -12,7 +12,22 @@
     :hover {
       cursor: pointer;
     }
+    margin-bottom: 2px;
   }
+
+ .input-control-no-border{
+  border-color:#ccc;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+ }
+
+ .input-control-add-border:focus {
+  border-color: #999;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.6);
+} 
 
   //CSS for pagination component
   .pagination {

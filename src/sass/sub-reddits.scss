@@ -10,3 +10,9 @@
 .post-items{
   box-shadow: 10px 10px 5px grey;
 }
+
+.modal.modal-dialog.modal-content.modal-body img{
+    display: block;
+    width: 100% !important;
+    max-height: 100%
+  }

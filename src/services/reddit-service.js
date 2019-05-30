@@ -25,7 +25,7 @@ export default class RedditService {
    */
   getSubReddits(subreddit) {
     return this.client
-      .get(`/r/${subreddit}.json`)
+      .get(`/r/${subreddit}.json?limit=50`)
       .then(response => response.data);
   }
 }
