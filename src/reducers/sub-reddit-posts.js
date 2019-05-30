@@ -7,12 +7,12 @@ import {
 
 const initialState = null;
 
-function subRedditPosts(state = initialState, { type, data } = {}) {
+function subRedditPosts(state = initialState, { type, response = [] } = {}) {
   switch (type) {
     case SUBREDDIT_POSTS_FETCH_SUCCESS:
-      return data;
+      return response;
     case SUBREDDIT_POSTS_FETCH_FAILURE:
-      return null;
+      return [];
     default:
       return state;
   }
@@ -39,5 +39,5 @@ export default combineReducers({
 // _________SELCECTORS__________
 //*****************************/
 
-export const getSubRedditPosts = state => state.subRedditPosts || [];
-export const isLoadingPosts = state => state && state.isLoading;
+export const getSubRedditPosts = state => state.subRedditPosts;
+export const isLoadingPosts = state => state.isLoading || false;

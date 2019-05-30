@@ -15,7 +15,7 @@ export const fetchSubRedditPostsRequest = subreddit => ({
 
 /**
  * Action creator to get list of subreddit posts success
- * @return {{type: string, response: object}} - Returns object for dispatch
+ * @return {{type: string, response: array}} - Returns object for dispatch
  */
 export const fetchSubRedditPostsSuccess = response => ({
   type: SUBREDDIT_POSTS_FETCH_SUCCESS,

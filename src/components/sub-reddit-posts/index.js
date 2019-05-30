@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { fetchSubRedditPostsRequest } from "../../actions/creators";
 import { getSubRedditPosts, isLoadingPosts } from "../../reducers";
-import SubRedditPosts from "./sub-reddit-posts";
-import { throws } from "assert";
+import Search from "./search";
 
 export class SubRedditPostsContainer extends Component {
   static propTypes = {
@@ -15,7 +14,7 @@ export class SubRedditPostsContainer extends Component {
 
   render() {
     return (
-      <SubRedditPosts
+      <Search
         fetchSubRedditPostsRequest={this.props.fetchSubRedditPostsRequest}
         posts={this.props.posts}
         isLoadingPosts={this.props.isLoadingPosts}

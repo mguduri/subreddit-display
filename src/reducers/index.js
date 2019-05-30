@@ -20,4 +20,4 @@ export const getAppConfig = state => state.appConfig;
 export const getSubRedditPosts = state =>
   fromsubRedditPosts.getSubRedditPosts(state.subRedditPosts);
 export const isLoadingPosts = state =>
-  fromsubRedditPosts.isLoadingPosts(state.isLoadingPosts);
+  fromsubRedditPosts.isLoadingPosts(state.subRedditPosts);

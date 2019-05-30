@@ -5,8 +5,8 @@ import {
   fetchSubRedditPostsFailure
 } from "../actions/creators";
 
-export const transformResponse = response => {
-  const { children = [] } = response;
+export const transformResponse = ({ data = {} }) => {
+  const { children = [] } = data;
   return children;
 };
 
@@ -17,7 +17,8 @@ export default function* getSubRedditPosts({ subreddit = "" }) {
       [redditService, redditService.getSubReddits],
       subreddit
     );
-    yield put(fetchSubRedditPostsSuccess(transformResponse(response)));
+    const posts = transformResponse(response);
+    yield put(fetchSubRedditPostsSuccess(posts));
   } catch (error) {
     yield put(fetchSubRedditPostsFailure(error));
   }
