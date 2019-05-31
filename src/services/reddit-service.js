@@ -1,5 +1,4 @@
 import axios from "axios";
-
 /**
  * service endpoint to fetch sub reddit posts
  * @class
@@ -26,6 +25,7 @@ export default class RedditService {
   getSubReddits(subreddit) {
     return this.client
       .get(`/r/${subreddit}.json?limit=50`)
-      .then(response => response.data);
+      .then(response => response.data)
+      .catch(error => error);
   }
 }

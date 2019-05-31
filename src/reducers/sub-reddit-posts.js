@@ -5,9 +5,7 @@ import {
   SUBREDDIT_POSTS_FETCH_SUCCESS
 } from "../actions/types";
 
-const initialState = null;
-
-function subRedditPosts(state = initialState, { type, response = [] } = {}) {
+export function subRedditPosts(state = [], { type, response = [] } = {}) {
   switch (type) {
     case SUBREDDIT_POSTS_FETCH_SUCCESS:
       return response;
@@ -18,7 +16,7 @@ function subRedditPosts(state = initialState, { type, response = [] } = {}) {
   }
 }
 
-function isLoading(state = false, { type }) {
+export function isLoading(state = false, { type }) {
   switch (type) {
     case SUBREDDIT_POSTS_FETCH_REQUEST:
       return true;
