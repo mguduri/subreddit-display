@@ -21,7 +21,7 @@ yarn start
 yarn test:coverage
 
 ```
-### Production 
+## Production 
 
 ```sh
 yarn build
