@@ -18,10 +18,10 @@ export default class Search extends Component {
 
   fetchposts = event => {
     if (event.key === "Enter") {
-      const searchVal = event.target.value || "";
+      const searchVal = event && event.target && event.target.value || "";
       if (searchVal !== "") {
         const { fetchSubRedditPostsRequest } = this.props;
-        fetchSubRedditPostsRequest(searchVal);
+        fetchSubRedditPostsRequest && fetchSubRedditPostsRequest(searchVal);
       }
     }
   };
@@ -36,7 +36,7 @@ export default class Search extends Component {
       );
     } else if (posts && posts.length > 0) {
       return <Posts posts={posts} />;
-    } else if (posts && posts.length === 0) {
+    } else if (posts && posts.length == 0) {
       return (
         <span className="empty-results text-secondary">No Results Found</span>
       );

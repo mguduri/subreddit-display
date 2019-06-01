@@ -9,7 +9,7 @@ export default class Posts extends Component {
   };
 
   getPostBody = currentPost => {
-    let { post_hint, url, selftext } = currentPost;
+    let { post_hint = '', url = '', selftext = '' } = currentPost;
 
     if (post_hint && post_hint.indexOf("video") > 0) {
       post_hint = "video";
@@ -39,20 +39,22 @@ export default class Posts extends Component {
             </li>
           </ul>
         );
-      default:
+      default:{
         return selftext || "";
+
+      }
     }
   };
 
   handleCurrentPost = currentPost => {
     const title = currentPost.title || "",
       body = this.getPostBody(currentPost);
-    this.props.openPost(title, body);
+      this.props.openPost(title, body);
   };
 
   render() {
     const { author, title, id, created } = this.props.data;
-    const days = getTotalDays(created) || 0;
+    const days = getTotalDays(created);
 
     return (
       <li

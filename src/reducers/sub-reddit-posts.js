@@ -5,7 +5,7 @@ import {
   SUBREDDIT_POSTS_FETCH_SUCCESS
 } from "../actions/types";
 
-export function subRedditPosts(state = [], { type, response = [] } = {}) {
+export function subRedditPosts(state = null, { type, response = [] } = {}) {
   switch (type) {
     case SUBREDDIT_POSTS_FETCH_SUCCESS:
       return response;

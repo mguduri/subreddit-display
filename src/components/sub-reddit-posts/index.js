@@ -23,12 +23,18 @@ export class SubRedditPostsContainer extends Component {
   }
 }
 
-export default connect(
-  state => ({
+export const mapStateToProps = state => {
+  return {
     posts: getSubRedditPosts(state),
     isLoadingPosts: isLoadingPosts(state)
-  }),
-  {
-    fetchSubRedditPostsRequest
-  }
+  };
+};
+
+export const mapDispatchToProps = {
+  fetchSubRedditPostsRequest
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
 )(SubRedditPostsContainer);
