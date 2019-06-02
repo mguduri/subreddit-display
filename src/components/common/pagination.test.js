@@ -6,17 +6,21 @@ import Pagination from "./pagination";
 describe("<Pagination/> - component", () => {
   let pagination;
   const renderPosts = jest.fn();
-  let data = [{data:{id:1}},{data:{id:2}}],
-  itemsperPage = 2;
+  let data = [{ data: { id: 1 } }, { data: { id: 2 } }],
+    itemsperPage = 2;
 
   afterEach(() => {
     renderPosts.mockClear();
   });
 
   it("should render Pagination", () => {
-    pagination = mount(<Pagination renderPosts={renderPosts} data={data} 
-        itemsperPage={itemsperPage}/>);
+    pagination = mount(
+      <Pagination
+        renderPosts={renderPosts}
+        data={data}
+        itemsperPage={itemsperPage}
+      />
+    );
     expect(pagination.find(".pagination").length).toEqual(1);
   });
-
 });

@@ -9,7 +9,7 @@ export default class Posts extends Component {
   };
 
   getPostBody = currentPost => {
-    let { post_hint = '', url = '', selftext = '' } = currentPost;
+    let { post_hint = "", url = "", selftext = "" } = currentPost;
 
     if (post_hint && post_hint.indexOf("video") > 0) {
       post_hint = "video";
@@ -39,9 +39,8 @@ export default class Posts extends Component {
             </li>
           </ul>
         );
-      default:{
+      default: {
         return selftext || "";
-
       }
     }
   };
@@ -49,7 +48,7 @@ export default class Posts extends Component {
   handleCurrentPost = currentPost => {
     const title = currentPost.title || "",
       body = this.getPostBody(currentPost);
-      this.props.openPost(title, body);
+    this.props.openPost(title, body);
   };
 
   render() {

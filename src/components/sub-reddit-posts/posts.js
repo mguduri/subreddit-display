@@ -30,9 +30,7 @@ export default class Posts extends Component {
   };
 
   displayPosts = ({ data }) => {
-    return (
-        <Post key={data.id} openPost = {this.openPost} data={data}/>
-    );
+    return <Post key={data.id} openPost={this.openPost} data={data} />;
   };
 
   renderPosts = currentPosts => {

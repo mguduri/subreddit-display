@@ -18,7 +18,7 @@ export default class Search extends Component {
 
   fetchposts = event => {
     if (event.key === "Enter") {
-      const searchVal = event && event.target && event.target.value || "";
+      const searchVal = (event && event.target && event.target.value) || "";
       if (searchVal !== "") {
         const { fetchSubRedditPostsRequest } = this.props;
         fetchSubRedditPostsRequest && fetchSubRedditPostsRequest(searchVal);
@@ -59,6 +59,7 @@ export default class Search extends Component {
                   name="subreddit"
                   placeholder="Enter subreddit here"
                   onKeyPress={this.fetchposts}
+                  autoComplete="off"
                 />
               </div>
             </div>
