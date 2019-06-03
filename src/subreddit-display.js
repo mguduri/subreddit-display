@@ -4,7 +4,7 @@ import configureStore from "./store/configure-store";
 import SubRedditPosts from "./components/sub-reddit-posts";
 import appConfig from "../config.json";
 
-export default class RedditDataScraping extends Component {
+export default class SubredditDisplay extends Component {
   constructor(props) {
     super(props);
     const initialState = { appConfig };

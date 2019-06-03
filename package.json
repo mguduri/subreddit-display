@@ -1,5 +1,5 @@
 {
-  "name": "reddit-data-scraping",
+  "name": "subreddit-display",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,15 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mguduri/reddit-data-scraping.git"
+    "url": "git+https://github.com/mguduri/subreddit-display.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mguduri/reddit-data-scraping/issues"
+    "url": "https://github.com/mguduri/subreddit-display/issues"
   },
-  "homepage": "https://github.com/mguduri/reddit-data-scraping#readme",
+  "homepage": "https://github.com/mguduri/subreddit-display#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",

@@ -2,6 +2,6 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./sass/index.scss";
 import React from "react";
 import ReactDOM from "react-dom";
-import RedditDataScraping from "./reddit-data-scraping";
+import SubredditDisplay from "./subreddit-display";
 
-ReactDOM.render(<RedditDataScraping />, document.getElementById("index"));
+ReactDOM.render(<SubredditDisplay />, document.getElementById("index"));
