@@ -32,7 +32,8 @@ yarn install
 ```sh
 yarn start
 ```
-At this point, `subreddit-display` should be running on port `8080`
+At this point, `subreddit-display` should be running on port `8080`.
+Enter any subreddit name (ex: Reactjs) in the search bar displayed on the homepage
 
 
 ## Testing
