@@ -13,7 +13,7 @@ export default class SubredditDisplay extends Component {
 
   render() {
     return (
-      <div className="reddit-data-scraper">
+      <div className="reddit-data-display">
         <Provider store={this.store}>
           <SubRedditPosts />
         </Provider>
