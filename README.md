@@ -125,6 +125,7 @@ There are 3 primary components: `search`, `posts` and `post`
 
 ## Discussion
 Some of the thoughts occurred while working on the app:
+- App could be built using React alone. Redux is introduced keeping scalability in mind. 
 - I could have used my own css to render data, but instead I leveraged bootstap css for ease of use
 - I used my own pagination component to restrict the number of posts that could be viewed at once. This component is very basic and the look and feel could be enhanced based on the requirements
 - Also, instead of using pagination alone, we could also create infinite scrolling with pagination for a better user experience
