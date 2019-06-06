@@ -5,7 +5,6 @@ import rootSaga from "../sagas";
 
 const configureStore = initialState => {
   const sagaMiddleware = createSagaMiddleware();
-  /* istanbul ignore next */
   const enhancer = compose(
       applyMiddleware(sagaMiddleware),
       window.devToolsExtension ? window.devToolsExtension() : f => f
