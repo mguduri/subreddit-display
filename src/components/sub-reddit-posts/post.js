@@ -45,6 +45,7 @@ export default class Posts extends Component {
     }
   };
 
+//Update current post
   handleCurrentPost = currentPost => {
     const title = currentPost.title || "",
       body = this.getPostBody(currentPost);
